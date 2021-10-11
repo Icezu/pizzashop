@@ -5,7 +5,7 @@ Make some improvements in the Pizza class and pizzashop file by refactoring.
 Goals to achieve for the code are:
 
 1. Replace string literals with named constants.
-2. Rename amethods to use the Python naming convention.
+2. Rename methods to use the Python naming convention.
 3. Move misplaced code to a better place (Extract Method and then Move Method). This improves encapsulation and makes the code more reusable.
 4. Replace "switch" (`if` ... `elif` ... `elif`) with object behavior.
 
@@ -177,11 +177,11 @@ This is the most complex refactoring, but it gives big gains in code quality:
 
 The `get_price` method has a block like this:
 ```python
-if self.size == Pizza.SMALL:
+if self.size == SMALL:
     price = ...
-elif self.size == Pizza.MEDIUM:
+elif self.size == MEDIUM:
     price = ...
-elif self.size == Pizza.LARGE:
+elif self.size == LARGE:
     price = ...
 ```
 The pizza has to know the pricing rule for each size, which makes the code complex.
